@@ -1,0 +1,53 @@
+{
+	"gammaAccess": {
+		"url": "http://192.168.2.188:3000",
+		"userName": "windows7@mygamma.io",
+		"password": "gamma123"
+	},
+	"repositories": [{
+			"repository": {
+				"uid": "143d75ec495be1b3bdfeb20046c4bf71",
+				"projectName": "gamma",
+				"sources": {
+					"baseDir": "$WORKSPACE",
+					"exclusions": ["exclusion_regex", "exclusion_regex"]
+				}
+			},
+			"settings": {
+				"additionalOptions": ["Additional parsing option", "Additional parsing option"],
+				"includePaths":["path to the include directory", "path to the include directory"]
+			},
+			"dataDir": "$GAMMA_DATA",
+			"modules": {
+				"codeissues": [{
+						"name": "cppcheck"
+					}, {
+						"name": "gamma_cxx"
+					}
+				],
+				"coverage": [{
+						"name": "gcov",
+						"config": {
+							"options": [{
+									"name": "reportDir",
+									"value": "path_where_gcov_report_xmls_will_be_created"
+								}
+							]
+						}
+					}
+				],
+				"unittest": [{
+						"name": "gtest",
+						"config": {
+							"options": [{
+									"name": "reportDir",
+									"value": "path_where_gtest_report_xmls_will_be_created"
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	]
+}
